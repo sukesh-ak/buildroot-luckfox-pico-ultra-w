@@ -1,4 +1,4 @@
-# How to compile and build OS for Luckfox Pico Ultra W using buildroot
+# How to build OS using buildroot for Luckfox Pico Ultra W
 
 ### Pre-requisite
 You need a computer with Linux (preferably Ubuntu). You can use PC, Virtual Machine or WSL2 for this.
