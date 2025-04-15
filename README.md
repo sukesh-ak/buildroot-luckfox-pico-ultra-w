@@ -33,12 +33,21 @@ git clone https://github.com/LuckfoxTECH/luckfox-pico.git
 # Use the above cloned location as SDK_Path (interactive)
 sudo docker run -it --name luckfox  -v (SDK_Path):/home luckfoxtech/luckfox_pico:1.0 /bin/bash
 
+# Full command will look something like this
+sudo docker run -it --name luckfox -v /home/<username>/luckfox-pico:/home luckfoxtech/luckfox_pico:1.0 /bin/bash
+
 # Non-interactive (optional)
 sudo docker run -d --name luckfox_ssh -p 8866:22 -v /(SDK_Path):/home luckfoxtech/luckfox_pico:1.0 /sshd.sh
 # if non-interactive, then login with below credentials
 login to 8866
 username: root
 password: luckfox
+```
+
+In case you get error `The container name "/luckfox" is already in use by container`
+```bash
+# The following will delete the existing running container called luckfox
+sudo docker rm luckfox
 ```
 
 ### Setup build configuration and build
